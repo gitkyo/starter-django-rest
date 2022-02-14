@@ -29,5 +29,7 @@ router.register(r'choices', views.ChoiceViewSet)
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include(router.urls)),
+    path('questions/', views.question_list),
+    path('questions/<int:pk>', views.question_detail),
     path('api-auth/', include('rest_framework.urls', namespace='rest_framework'))
 ]
